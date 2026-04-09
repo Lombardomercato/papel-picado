@@ -6,12 +6,12 @@
     <title>Papel Picado | Pueblo Esther</title>
     <meta
       name="description"
-      content="Papel Picado: cotillón, descartables, repostería y papelería en Pueblo Esther. Soluciones para festejos y negocios gastronómicos."
+      content="Papel Picado: descartables, cotillón, repostería y papelería en Pueblo Esther. Soluciones premium para negocios gastronómicos y celebraciones."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -27,180 +27,212 @@
       WhatsApp
     </a>
 
-    <header class="hero section">
-      <div class="container hero-grid fade-in-up">
-        <div>
-          <p class="eyebrow">Pueblo Esther, Santa Fe</p>
-          <h1>Todo para tu negocio y tus festejos, en un solo lugar</h1>
-          <p class="lead">
-            Cotillón, descartables, repostería y papelería en Pueblo Esther.
-          </p>
-          <div class="cta-row">
-            <a
-              class="btn btn-primary"
-              href="https://wa.me/5493410000000?text=Hola%20Papel%20Picado,%20quiero%20hacer%20un%20pedido"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Pedir por WhatsApp</a
-            >
-            <a class="btn btn-ghost" href="#categorias">Ver productos</a>
-          </div>
-        </div>
-        <div class="hero-image-card">
-          <img
-            src="https://images.unsplash.com/photo-1481391564276-da6fcacaee09?auto=format&fit=crop&w=1200&q=80"
-            alt="Mesa colorida con productos para festejos"
-            loading="eager"
-          />
-        </div>
+    <header class="site-header" id="inicio">
+      <div class="container nav-wrap">
+        <a href="#inicio" class="brand" aria-label="Papel Picado inicio">
+          <span class="brand-dot"></span>
+          <span>Papel Picado</span>
+        </a>
+        <nav aria-label="Principal" class="main-nav">
+          <a href="#inicio">Inicio</a>
+          <a href="#empresas">Empresas</a>
+          <a href="#festejos">Festejos</a>
+          <a href="#categorias">Categorías</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a
+          class="btn btn-primary nav-cta"
+          href="https://wa.me/5493410000000?text=Hola%20Papel%20Picado,%20quiero%20hacer%20un%20pedido"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Pedir por WhatsApp</a
+        >
       </div>
     </header>
 
     <main>
-      <section class="section">
-        <div class="container card highlight fade-in-up">
-          <h2>¿Tenés un negocio gastronómico?</h2>
-          <p>
-            Trabajamos con cafeterías, bares, restaurantes y emprendimientos que
-            necesitan stock constante y buena atención.
-          </p>
-          <ul class="check-list">
-            <li>Compra por volumen</li>
-            <li>Reposición constante</li>
-            <li>Atención rápida</li>
-            <li>Variedad de productos</li>
-          </ul>
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/5493410000000?text=Hola%20Papel%20Picado,%20quiero%20consultar%20por%20compras%20mayoristas"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Consultar por WhatsApp</a
-          >
-        </div>
-      </section>
-
-      <section class="section alt-bg">
-        <div class="container fade-in-up">
-          <h2>Todo para tus festejos</h2>
-          <p>
-            Desde cumpleaños y celebraciones familiares hasta eventos especiales:
-            encontrá en un solo lugar todo lo que necesitás para decorar, servir
-            y sorprender.
-          </p>
-        </div>
-      </section>
-
-      <section id="categorias" class="section">
-        <div class="container fade-in-up">
-          <h2>Categorías principales</h2>
-          <div class="category-grid">
-            <article class="card category featured">
+      <section class="hero section reveal" aria-labelledby="hero-title">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Pueblo Esther, Santa Fe</p>
+            <h1 id="hero-title">Todo para tu negocio y tus festejos</h1>
+            <p class="lead">
+              Descartables, cotillón, repostería y papelería en Pueblo Esther.
+              Atendemos a empresas, emprendimientos y clientes finales.
+            </p>
+            <div class="cta-row">
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/5493410000000?text=Hola%20Papel%20Picado,%20quiero%20hacer%20un%20pedido"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pedir por WhatsApp</a
+              >
+              <a class="btn btn-outline" href="#categorias">Ver categorías</a>
+            </div>
+          </div>
+          <div class="hero-media" aria-label="Composición visual de productos y celebraciones">
+            <figure class="hero-card tall">
               <img
-                src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80"
-                alt="Descartables para negocios"
-                loading="lazy"
+                src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1200&q=80"
+                alt="Mesa dulce con decoración de celebración"
+                loading="eager"
               />
-              <h3>Descartables</h3>
-              <p>Vasos, bandejas, envases y más para uso diario.</p>
-            </article>
-            <article class="card category">
+            </figure>
+            <figure class="hero-card wide">
               <img
-                src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80"
-                alt="Productos de cotillón"
-                loading="lazy"
+                src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1200&q=80"
+                alt="Cafetería sirviendo bebidas para take away"
+                loading="eager"
               />
-              <h3>Cotillón</h3>
-              <p>Accesorios para fiestas y celebraciones.</p>
-            </article>
-            <article class="card category">
+            </figure>
+            <figure class="hero-card small">
               <img
-                src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=900&q=80"
-                alt="Artículos de repostería"
-                loading="lazy"
+                src="https://images.unsplash.com/photo-1528578829123-9f8398118d8c?auto=format&fit=crop&w=900&q=80"
+                alt="Packaging y descartables organizados"
+                loading="eager"
               />
-              <h3>Repostería</h3>
-              <p>Moldes, cápsulas, mangas y decoración dulce.</p>
-            </article>
-            <article class="card category">
-              <img
-                src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=900&q=80"
-                alt="Papelería"
-                loading="lazy"
-              />
-              <h3>Papelería</h3>
-              <p>Escolar, oficina y librería para cada necesidad.</p>
-            </article>
-            <article class="card category">
-              <img
-                src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80"
-                alt="Globos y decoración"
-                loading="lazy"
-              />
-              <h3>Globos y decoración</h3>
-              <p>Detalles que transforman cualquier espacio.</p>
-            </article>
-            <article class="card category">
-              <img
-                src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=80"
-                alt="Productos de packaging"
-                loading="lazy"
-              />
-              <h3>Packaging</h3>
-              <p>Bolsas, cajas y opciones para entrega prolija.</p>
-            </article>
+            </figure>
           </div>
         </div>
       </section>
 
-      <section class="section alt-bg">
-        <div class="container fade-in-up split">
+      <section class="section brand-intro reveal">
+        <div class="container intro-grid">
+          <p class="kicker">Nuestra esencia</p>
           <div>
-            <h2>Resolvé todo más rápido</h2>
+            <h2>Papel Picado acompaña celebraciones, negocios y proyectos de todos los días.</h2>
             <p>
-              Ahorrá tiempo: comprá en un solo lugar y llevate todo lo necesario
-              para tu negocio o tu evento, con asesoramiento cercano.
+              Desde una fiesta en casa hasta la reposición de insumos para cafeterías y
+              restaurantes, resolvemos con variedad, cercanía y atención rápida.
             </p>
           </div>
-          <div class="pill-row">
-            <span class="pill">Atención ágil</span>
-            <span class="pill">Stock variado</span>
-            <span class="pill">Soluciones simples</span>
+        </div>
+      </section>
+
+      <section class="section section-soft reveal" id="empresas" aria-labelledby="empresas-title">
+        <div class="container feature-grid">
+          <div>
+            <p class="kicker">B2B</p>
+            <h2 id="empresas-title">Tu proveedor local de descartables</h2>
+            <p>
+              Acompañamos a cafés, bares, restaurantes y emprendimientos con soluciones
+              pensadas para el ritmo real de cada negocio.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5493410000000?text=Hola%20Papel%20Picado,%20quiero%20consultar%20por%20compra%20por%20volumen"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Hablar por WhatsApp</a
+            >
+          </div>
+          <div class="benefits-grid">
+            <article class="benefit-card"><h3>Compra por volumen</h3><p>Precios y cantidades para operación diaria.</p></article>
+            <article class="benefit-card"><h3>Reposición constante</h3><p>Stock pensado para no frenar tu servicio.</p></article>
+            <article class="benefit-card"><h3>Atención rápida</h3><p>Respuesta ágil para pedidos y consultas.</p></article>
+            <article class="benefit-card"><h3>Variedad de productos</h3><p>Todo en un solo punto, de base a detalle.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container fade-in-up">
-          <h2>¿Para qué te ayudamos?</h2>
-          <div class="use-cases-grid">
-            <article class="card use-case"><span>☕</span>Cafeterías</article>
-            <article class="card use-case"><span>🥡</span>Take away</article>
-            <article class="card use-case"><span>🎉</span>Eventos</article>
-            <article class="card use-case"><span>🎈</span>Decoración</article>
-            <article class="card use-case"><span>🧁</span>Mesas dulces</article>
+      <section class="section reveal" id="festejos" aria-labelledby="festejos-title">
+        <div class="container celebration-grid">
+          <figure class="editorial-image">
+            <img
+              src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1400&q=80"
+              alt="Decoración colorida para cumpleaños y eventos"
+              loading="lazy"
+            />
+          </figure>
+          <div>
+            <p class="kicker">B2C</p>
+            <h2 id="festejos-title">Todo para celebrar mejor</h2>
+            <p>
+              Cumpleaños, eventos familiares, mesas dulces y celebraciones temáticas: elegí
+              productos con estilo, combiná colores y resolvé todo en un solo lugar.
+            </p>
+            <div class="tags">
+              <span>Cumpleaños</span>
+              <span>Mesas dulces</span>
+              <span>Decoración</span>
+              <span>Temáticas</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section alt-bg">
-        <div class="container fade-in-up">
-          <h2>Siempre listos para cada temporada</h2>
-          <div class="seasonal-row">
-            <span class="season-chip">Cumpleaños</span>
-            <span class="season-chip">Fiestas</span>
-            <span class="season-chip">Eventos escolares</span>
+      <section class="section section-contrast reveal" id="categorias" aria-labelledby="categorias-title">
+        <div class="container">
+          <div class="heading-row">
+            <p class="kicker">Categorías</p>
+            <h2 id="categorias-title">Todo lo que necesitás, curado por rubro</h2>
+          </div>
+          <div class="category-grid">
+            <article class="category-card featured">
+              <img src="https://images.unsplash.com/photo-1583251633146-d0c6c36f0b0a?auto=format&fit=crop&w=1400&q=80" alt="Descartables para gastronomía" loading="lazy" />
+              <div><h3>Descartables</h3><p>La categoría central para gastronomía y eventos de alto movimiento.</p></div>
+            </article>
+            <article class="category-card"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1200&q=80" alt="Cotillón para fiestas" loading="lazy" /><div><h3>Cotillón</h3></div></article>
+            <article class="category-card"><img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=1200&q=80" alt="Insumos para repostería" loading="lazy" /><div><h3>Repostería</h3></div></article>
+            <article class="category-card"><img src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=1200&q=80" alt="Papelería comercial" loading="lazy" /><div><h3>Papelería</h3></div></article>
+            <article class="category-card"><img src="https://images.unsplash.com/photo-1525935944571-4e99237764c9?auto=format&fit=crop&w=1200&q=80" alt="Globos y decoración para eventos" loading="lazy" /><div><h3>Globos y decoración</h3></div></article>
+            <article class="category-card"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80" alt="Packaging para take away" loading="lazy" /><div><h3>Packaging</h3></div></article>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container final-cta fade-in-up">
-          <h2>Te ayudamos a resolverlo rápido</h2>
+      <section class="section reveal" aria-labelledby="momentos-title">
+        <div class="container">
+          <p class="kicker">Momentos de uso</p>
+          <h2 id="momentos-title">Pensado para contextos reales</h2>
+          <div class="moments-grid">
+            <article><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80" alt="Cafetería" loading="lazy" /><span>Cafeterías</span></article>
+            <article><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Take away" loading="lazy" /><span>Take away</span></article>
+            <article><img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=900&q=80" alt="Cumpleaños" loading="lazy" /><span>Cumpleaños</span></article>
+            <article><img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=900&q=80" alt="Mesas dulces" loading="lazy" /><span>Mesas dulces</span></article>
+            <article><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" alt="Eventos" loading="lazy" /><span>Eventos</span></article>
+            <article><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=900&q=80" alt="Fechas especiales" loading="lazy" /><span>Fechas especiales</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft reveal" aria-labelledby="destacados-title">
+        <div class="container">
+          <h2 id="destacados-title">Selección destacada</h2>
+          <div class="featured-gallery">
+            <article>
+              <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1300&q=80" alt="Productos para negocios" loading="lazy" />
+              <div><h3>Para tu negocio</h3><a href="#contacto">Ver más</a></div>
+            </article>
+            <article>
+              <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1300&q=80" alt="Decoración de eventos" loading="lazy" />
+              <div><h3>Para tus eventos</h3><a href="#contacto">Ver más</a></div>
+            </article>
+            <article>
+              <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=1300&q=80" alt="Detalles de papelería y packaging" loading="lazy" />
+              <div><h3>Para cada detalle</h3><a href="#contacto">Ver más</a></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" aria-labelledby="local-title">
+        <div class="container trust-box">
+          <p class="kicker">Pueblo Esther</p>
+          <h2 id="local-title">Cerca, resolutivos y con todo en un solo lugar.</h2>
           <p>
-            Escribinos y armamos tu pedido para el día a día o para tu próxima
-            celebración.
+            Somos un comercio local que entiende tus tiempos: cercanía real, asesoramiento
+            humano y soluciones para el día a día de empresas y familias.
           </p>
+        </div>
+      </section>
+
+      <section class="section reveal" id="contacto" aria-labelledby="cta-title">
+        <div class="container final-cta">
+          <h2 id="cta-title">¿Necesitás resolver un evento o abastecer tu negocio?</h2>
+          <p>Escribinos y te ayudamos rápido.</p>
           <a
             class="btn btn-primary"
             href="https://wa.me/5493410000000?text=Hola%20Papel%20Picado,%20necesito%20ayuda%20con%20un%20pedido"
@@ -212,19 +244,49 @@
       </section>
     </main>
 
-    <footer class="section footer">
+    <footer class="site-footer">
       <div class="container footer-grid">
         <div>
           <h3>Papel Picado</h3>
-          <p>Alberdi y San Lorenzo, Pueblo Esther</p>
-          <p>Tel: +54 9 341 000 0000</p>
+          <p>Alberdi y San Lorenzo, Pueblo Esther, Santa Fe</p>
+          <p>+54 9 341 000 0000</p>
         </div>
         <nav aria-label="Redes sociales" class="social-links">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="Facebook">Facebook</a>
-          <a href="#" aria-label="WhatsApp">WhatsApp</a>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="https://wa.me/5493410000000">WhatsApp</a>
         </nav>
       </div>
     </footer>
+
+    <script>
+      const header = document.querySelector('.site-header');
+      const reveals = document.querySelectorAll('.reveal');
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      reveals.forEach((item) => observer.observe(item));
+
+      const setHeaderState = () => {
+        if (window.scrollY > 18) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      };
+
+      setHeaderState();
+      window.addEventListener('scroll', setHeaderState);
+    </script>
   </body>
 </html>
