@@ -276,19 +276,33 @@ p {
   overflow: visible;
 }
 
-.script-path {
+.script-shadow,
+.script-path,
+.script-dot {
   fill: none;
-  stroke: url(#scriptGradient);
-  stroke-width: 10;
   stroke-linecap: round;
   stroke-linejoin: round;
-  filter: drop-shadow(0 10px 22px rgba(187, 95, 67, 0.22));
+  vector-effect: non-scaling-stroke;
 }
 
-.script-path.is-ready {
-  stroke-dasharray: var(--path-length);
-  stroke-dashoffset: var(--path-length);
-  animation: handwriting 3s cubic-bezier(0.24, 0.74, 0.34, 0.98) 0.2s forwards;
+.script-shadow {
+  stroke: rgba(250, 241, 233, 0.92);
+  stroke-width: clamp(8px, 1.08vw, 11px);
+}
+
+.script-path {
+  stroke: url(#scriptGradient);
+  stroke-width: clamp(5px, 0.75vw, 8px);
+  filter: drop-shadow(0 10px 22px rgba(187, 95, 67, 0.2));
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: handwritingLoop 5.2s cubic-bezier(0.34, 0.12, 0.29, 0.97) infinite;
+}
+
+.script-dot {
+  fill: url(#scriptGradient);
+  opacity: 0;
+  animation: dotLoop 5.2s ease-in-out infinite;
 }
 
 .sr-only {
@@ -329,16 +343,51 @@ p {
   color: #7a6860;
 }
 
-@keyframes handwriting {
-  to {
+@keyframes handwritingLoop {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
     stroke-dashoffset: 0;
+  }
+  59.6% {
+    stroke-dashoffset: 0;
+  }
+  94.2% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes dotLoop {
+  0%,
+  14% {
+    opacity: 0;
+  }
+  18%,
+  80% {
+    opacity: 0.95;
+  }
+  94.2%,
+  100% {
+    opacity: 0;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .script-path.is-ready {
+  .script-path,
+  .script-dot {
     animation: none;
+  }
+
+  .script-path {
     stroke-dashoffset: 0;
+  }
+
+  .script-dot {
+    opacity: 1;
   }
 }
 
@@ -663,7 +712,11 @@ p {
   }
 
   .script-path {
-    stroke-width: 10;
+    stroke-width: clamp(4.8px, 1.05vw, 6.4px);
+  }
+
+  .script-shadow {
+    stroke-width: clamp(7.2px, 1.35vw, 9.6px);
   }
 
   .shape-a {

@@ -52,15 +52,29 @@
           <h1 id="hero-title" class="hero-title">
             <span class="hero-static">Hola,</span>
             <span class="hero-script" aria-label="bienvenido">
-              <svg viewBox="0 0 1120 270" role="img" aria-hidden="true" class="script-word">
+              <svg viewBox="0 0 1180 260" role="img" aria-hidden="true" class="script-word">
                 <defs>
-                  <linearGradient id="scriptGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <linearGradient id="scriptGradient" x1="2%" y1="16%" x2="98%" y2="84%">
                     <stop offset="0%" stop-color="#b75752" />
                     <stop offset="52%" stop-color="#d67258" />
                     <stop offset="100%" stop-color="#f0a26f" />
                   </linearGradient>
                 </defs>
-                <path class="script-path" d="M62 195c0 0 18-57 36-89c17-30 39-37 40-5c1 21-18 102 24 102c38 0 73-83 99-83c18 0-7 38-3 67c3 18 17 31 36 31c40 0 74-62 88-62c16 0-11 66 19 66c23 0 47-71 84-71c21 0-8 70 24 70c28 0 56-68 84-68c19 0-10 70 24 70c33 0 56-68 85-68c18 0-7 69 24 69c31 0 54-70 84-70c16 0 6 31 13 47c10 23 45 20 62-3c20-28 36-70 63-70c20 0-4 49 11 67c19 22 56 7 78-24c16-23 28-53 52-53c31 0 0 72 34 72c30 0 55-56 86-56" />
+
+                <path
+                  class="script-shadow"
+                  d="M56 188c14-48 18-118 34-118c20 0-8 104 16 104c22 0 30-68 56-68c18 0 2 48 20 48c17 0 26-38 43-38c15 0 3 37 18 37c20 0 30-43 54-43c18 0 5 50 24 50c20 0 33-50 56-50c18 0 7 50 25 50c21 0 34-50 58-50c19 0 7 49 27 49c18 0 31-49 53-49c15 0 4 24 11 37c8 16 30 15 44-4c15-20 27-48 46-48c14 0 3 39 13 52c12 16 35 10 49-9c15-20 25-47 46-47c23 0 7 64 30 64c24 0 40-51 64-51c22 0 8 48 30 48c20 0 35-48 58-48c17 0 6 33 14 46c10 17 31 16 45-2c16-20 26-50 47-50c16 0 5 34 13 45c10 14 30 12 43-2c16-17 28-43 49-43c26 0 12 67 40 67c25 0 44-56 70-56"
+                  pathLength="1000"
+                />
+
+                <path
+                  class="script-path"
+                  d="M56 188c14-48 18-118 34-118c20 0-8 104 16 104c22 0 30-68 56-68c18 0 2 48 20 48c17 0 26-38 43-38c15 0 3 37 18 37c20 0 30-43 54-43c18 0 5 50 24 50c20 0 33-50 56-50c18 0 7 50 25 50c21 0 34-50 58-50c19 0 7 49 27 49c18 0 31-49 53-49c15 0 4 24 11 37c8 16 30 15 44-4c15-20 27-48 46-48c14 0 3 39 13 52c12 16 35 10 49-9c15-20 25-47 46-47c23 0 7 64 30 64c24 0 40-51 64-51c22 0 8 48 30 48c20 0 35-48 58-48c17 0 6 33 14 46c10 17 31 16 45-2c16-20 26-50 47-50c16 0 5 34 13 45c10 14 30 12 43-2c16-17 28-43 49-43c26 0 12 67 40 67c25 0 44-56 70-56"
+                  pathLength="1000"
+                />
+
+                <path class="script-dot" d="M188 87c0 7-6 13-13 13s-13-6-13-13s6-13 13-13s13 6 13 13" />
+                <path class="script-dot" d="M835 89c0 6-5 11-11 11s-11-5-11-11s5-11 11-11s11 5 11 11" />
               </svg>
               <span class="sr-only">bienvenido</span>
             </span>
@@ -249,14 +263,6 @@
     <script>
       const header = document.querySelector('.site-header');
       const reveals = document.querySelectorAll('.reveal');
-      const scriptPath = document.querySelector('.script-path');
-
-      if (scriptPath) {
-        const length = scriptPath.getTotalLength();
-        scriptPath.style.setProperty('--path-length', `${length}`);
-        scriptPath.classList.add('is-ready');
-      }
-
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
