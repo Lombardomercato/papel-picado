@@ -1,0 +1,105 @@
+<!-- Animated handwritten word: bienvenido (embed this block inside your hero) -->
+<div class="pp-bienvenido-wrap" aria-label="bienvenido">
+  <svg
+    class="pp-bienvenido"
+    viewBox="0 0 920 210"
+    role="img"
+    aria-labelledby="pp-bienvenido-title"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title id="pp-bienvenido-title">bienvenido</title>
+
+    <defs>
+      <linearGradient id="ppInkGradient" x1="0%" y1="8%" x2="100%" y2="82%">
+        <stop offset="0%" stop-color="#dc7f66" />
+        <stop offset="34%" stop-color="#f0ab84" />
+        <stop offset="68%" stop-color="#f2c57b" />
+        <stop offset="100%" stop-color="#c99ac8" />
+      </linearGradient>
+      <filter id="ppSoftGlow" x="-20%" y="-20%" width="140%" height="160%">
+        <feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#cb7f69" flood-opacity="0.23" />
+      </filter>
+    </defs>
+
+    <!-- Handwritten approximation of "bienvenido" in one flowing stroke -->
+    <path
+      class="pp-bienvenido-ghost"
+      d="M28 148c10-47 16-86 22-112c2-10 12-12 19-4c17 19-20 120 10 120c23 0 51-92 72-90c13 1-6 44 0 66c3 11 12 19 24 19c27 0 38-49 49-49c9 0-9 52 13 52c16 0 30-56 56-56c16 0-3 55 19 55c20 0 30-55 52-55c17 0-4 54 18 54c20 0 28-54 48-54c16 0-3 54 18 54c20 0 30-54 50-54c13 0 2 26 7 38c6 16 29 17 41 4c17-19 29-52 49-52c13 0-1 38 8 51c12 17 36 8 48-10c14-20 24-42 40-42c20 0 3 54 23 54c21 0 40-45 61-45"
+      pathLength="1000"
+    />
+
+    <path
+      class="pp-bienvenido-main"
+      d="M28 148c10-47 16-86 22-112c2-10 12-12 19-4c17 19-20 120 10 120c23 0 51-92 72-90c13 1-6 44 0 66c3 11 12 19 24 19c27 0 38-49 49-49c9 0-9 52 13 52c16 0 30-56 56-56c16 0-3 55 19 55c20 0 30-55 52-55c17 0-4 54 18 54c20 0 28-54 48-54c16 0-3 54 18 54c20 0 30-54 50-54c13 0 2 26 7 38c6 16 29 17 41 4c17-19 29-52 49-52c13 0-1 38 8 51c12 17 36 8 48-10c14-20 24-42 40-42c20 0 3 54 23 54c21 0 40-45 61-45"
+      pathLength="1000"
+    />
+  </svg>
+</div>
+
+<style>
+  .pp-bienvenido-wrap {
+    width: min(74vw, 760px);
+    min-width: 240px;
+  }
+
+  .pp-bienvenido {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .pp-bienvenido-ghost,
+  .pp-bienvenido-main {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .pp-bienvenido-ghost {
+    stroke: #f8ecdf;
+    stroke-width: clamp(7px, 0.95vw, 10px);
+    opacity: 0.9;
+  }
+
+  .pp-bienvenido-main {
+    stroke: url(#ppInkGradient);
+    stroke-width: clamp(4.7px, 0.65vw, 7.2px);
+    filter: url(#ppSoftGlow);
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: ppWrite 3s cubic-bezier(0.2, 0.75, 0.3, 1) 0.25s forwards,
+      ppSettle 0.75s ease-out 3.15s forwards;
+  }
+
+  @keyframes ppWrite {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes ppSettle {
+    from {
+      filter: url(#ppSoftGlow);
+      opacity: 0.96;
+    }
+    to {
+      filter: drop-shadow(0 6px 12px rgba(203, 127, 105, 0.14));
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .pp-bienvenido-wrap {
+      width: min(92vw, 560px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pp-bienvenido-main {
+      animation: none;
+      stroke-dashoffset: 0;
+    }
+  }
+</style>
