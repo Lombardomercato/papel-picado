@@ -256,15 +256,6 @@ p {
   max-width: 15ch;
 }
 
-.hero-static {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(3rem, 10vw, 8.2rem);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 0.92;
-  color: #1e1817;
-}
-
 .hero-script {
   display: block;
   width: min(95vw, 880px);
@@ -276,42 +267,17 @@ p {
   overflow: visible;
 }
 
-.pp-bienvenido-base path,
-.pp-bienvenido-stroke path {
+.pp-bienvenidos-path {
+  fill: none;
+  stroke: url(#ppBienvenidosGradient);
+  stroke-width: clamp(4.2px, 0.58vw, 6.4px);
   stroke-linecap: round;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
-}
-
-.pp-bienvenido-base path {
-  fill: url(#ppFillGradient);
-  stroke: rgba(245, 189, 150, 0.48);
-  stroke-width: clamp(1.6px, 0.22vw, 2.6px);
-  opacity: 0.95;
-}
-
-.pp-bienvenido-stroke {
-  clip-path: inset(0 100% 0 0);
-  animation: writeErase 5.2s ease-in-out infinite;
-}
-
-.pp-bienvenido-stroke path {
-  fill: none;
-  stroke: url(#ppInkGradient);
-  stroke-width: clamp(3.8px, 0.56vw, 6px);
   filter: drop-shadow(0 8px 18px rgba(190, 102, 73, 0.22));
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: bienvenidosLoop 5.4s cubic-bezier(0.35, 0.05, 0.2, 1) infinite;
 }
 
 .lead {
@@ -340,28 +306,28 @@ p {
   color: #7a6860;
 }
 
-@keyframes writeErase {
+@keyframes bienvenidosLoop {
   0% {
-    clip-path: inset(0 100% 0 0);
+    stroke-dashoffset: 1;
   }
-  50% {
-    clip-path: inset(0 0 0 0);
+  51.8519% {
+    stroke-dashoffset: 0;
   }
-  59.615% {
-    clip-path: inset(0 0 0 0);
+  61.1111% {
+    stroke-dashoffset: 0;
   }
-  94.231% {
-    clip-path: inset(0 100% 0 0);
+  94.4444% {
+    stroke-dashoffset: 1;
   }
   100% {
-    clip-path: inset(0 100% 0 0);
+    stroke-dashoffset: 1;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pp-bienvenido-stroke {
+  .pp-bienvenidos-path {
     animation: none;
-    clip-path: inset(0 0 0 0);
+    stroke-dashoffset: 0;
   }
 }
 
@@ -685,12 +651,8 @@ p {
     gap: 0.35rem;
   }
 
-  .pp-bienvenido-stroke path {
-    stroke-width: clamp(3.4px, 0.95vw, 5px);
-  }
-
-  .pp-bienvenido-base path {
-    stroke-width: clamp(1.4px, 0.4vw, 2.1px);
+  .pp-bienvenidos-path {
+    stroke-width: clamp(3.7px, 1.15vw, 5px);
   }
 
   .shape-a {
