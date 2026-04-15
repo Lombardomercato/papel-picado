@@ -276,17 +276,30 @@ p {
   overflow: visible;
 }
 
-.pp-bienvenido-word path {
-  fill: none;
-  stroke: url(#ppInkGradient);
+.pp-bienvenido-base path,
+.pp-bienvenido-stroke path {
   stroke-linecap: round;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
-  stroke-width: clamp(3.8px, 0.56vw, 6px);
-  filter: drop-shadow(0 8px 18px rgba(190, 102, 73, 0.2));
-  stroke-dasharray: 3000;
-  stroke-dashoffset: 3000;
+}
+
+.pp-bienvenido-base path {
+  fill: url(#ppFillGradient);
+  stroke: rgba(245, 189, 150, 0.48);
+  stroke-width: clamp(1.6px, 0.22vw, 2.6px);
+  opacity: 0.95;
+}
+
+.pp-bienvenido-stroke {
+  clip-path: inset(0 100% 0 0);
   animation: writeErase 5.2s ease-in-out infinite;
+}
+
+.pp-bienvenido-stroke path {
+  fill: none;
+  stroke: url(#ppInkGradient);
+  stroke-width: clamp(3.8px, 0.56vw, 6px);
+  filter: drop-shadow(0 8px 18px rgba(190, 102, 73, 0.22));
 }
 
 .sr-only {
@@ -329,26 +342,26 @@ p {
 
 @keyframes writeErase {
   0% {
-    stroke-dashoffset: 3000;
+    clip-path: inset(0 100% 0 0);
   }
   50% {
-    stroke-dashoffset: 0;
+    clip-path: inset(0 0 0 0);
   }
   59.615% {
-    stroke-dashoffset: 0;
+    clip-path: inset(0 0 0 0);
   }
   94.231% {
-    stroke-dashoffset: 3000;
+    clip-path: inset(0 100% 0 0);
   }
   100% {
-    stroke-dashoffset: 3000;
+    clip-path: inset(0 100% 0 0);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pp-bienvenido-word path {
+  .pp-bienvenido-stroke {
     animation: none;
-    stroke-dashoffset: 0;
+    clip-path: inset(0 0 0 0);
   }
 }
 
@@ -672,10 +685,12 @@ p {
     gap: 0.35rem;
   }
 
-  .pp-bienvenido-word path {
+  .pp-bienvenido-stroke path {
     stroke-width: clamp(3.4px, 0.95vw, 5px);
-    stroke-dasharray: 2600;
-    stroke-dashoffset: 2600;
+  }
+
+  .pp-bienvenido-base path {
+    stroke-width: clamp(1.4px, 0.4vw, 2.1px);
   }
 
   .shape-a {
