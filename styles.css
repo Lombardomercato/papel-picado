@@ -251,14 +251,27 @@ p {
 }
 
 .hero-title {
-  display: grid;
-  gap: 0.45rem;
-  max-width: 15ch;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: clamp(0.55rem, 1.4vw, 1rem);
+  row-gap: 0.35rem;
+  max-width: 18ch;
+}
+
+.hero-title-static {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(3.2rem, 10.3vw, 7.1rem);
+  line-height: 0.95;
+  letter-spacing: -0.018em;
+  color: #2f2724;
 }
 
 .hero-script {
-  display: block;
-  width: min(95vw, 880px);
+  display: inline-block;
+  width: clamp(170px, 36vw, 360px);
+  transform: translateY(0.16em);
 }
 
 .hero-script-svg {
@@ -270,11 +283,11 @@ p {
 .pp-bienvenidos-path {
   fill: none;
   stroke: url(#ppBienvenidosGradient);
-  stroke-width: clamp(4.2px, 0.58vw, 6.4px);
+  stroke-width: clamp(3.5px, 0.48vw, 4.8px);
   stroke-linecap: round;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
-  filter: drop-shadow(0 8px 18px rgba(190, 102, 73, 0.22));
+  filter: drop-shadow(0 8px 14px rgba(190, 102, 73, 0.2));
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
   animation: bienvenidosLoop 5.4s cubic-bezier(0.35, 0.05, 0.2, 1) infinite;
@@ -647,12 +660,20 @@ p {
   }
 
   .hero-title {
-    max-width: none;
-    gap: 0.35rem;
+    max-width: 16ch;
+  }
+
+  .hero-title-static {
+    font-size: clamp(2.85rem, 16vw, 4.45rem);
+  }
+
+  .hero-script {
+    width: clamp(165px, 52vw, 250px);
+    transform: translateY(0.06em);
   }
 
   .pp-bienvenidos-path {
-    stroke-width: clamp(3.7px, 1.15vw, 5px);
+    stroke-width: clamp(3.2px, 1vw, 4.4px);
   }
 
   .shape-a {
