@@ -329,7 +329,7 @@ p {
 
 @keyframes bienvenidoLoop {
   0% {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 1600;
   }
   50.909% {
     stroke-dashoffset: 0;
