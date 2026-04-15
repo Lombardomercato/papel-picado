@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -34,66 +34,50 @@
           <span>Papel Picado</span>
         </a>
         <nav aria-label="Principal" class="main-nav">
-          <a href="#inicio">Inicio</a>
-          <a href="#empresas">Empresas</a>
-          <a href="#festejos">Festejos</a>
           <a href="#categorias">Categorías</a>
           <a href="#contacto">Contacto</a>
         </nav>
-        <a
-          class="btn btn-primary nav-cta"
-          href="https://wa.me/5493410000000?text=Hola%20Papel%20Picado,%20quiero%20hacer%20un%20pedido"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Pedir por WhatsApp</a
-        >
       </div>
     </header>
 
     <main>
       <section class="hero section reveal" aria-labelledby="hero-title">
         <div class="hero-backdrop" aria-hidden="true"></div>
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Pueblo Esther, Santa Fe</p>
-            <h1 id="hero-title">Todo para tu negocio y tus festejos</h1>
-            <p class="lead">
-              Descartables, cotillón, repostería y papelería en Pueblo Esther.
-              Atendemos a empresas, emprendimientos y clientes finales.
-            </p>
-            <div class="cta-row">
-              <a
-                class="btn btn-primary"
-                href="https://wa.me/5493410000000?text=Hola%20Papel%20Picado,%20quiero%20hacer%20un%20pedido"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Pedir por WhatsApp</a
-              >
-              <a class="btn btn-outline" href="#categorias">Ver categorías</a>
-            </div>
-          </div>
-          <div class="hero-media" aria-label="Composición visual de productos y celebraciones">
-            <figure class="hero-card tall">
-              <img
-                src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1200&q=80"
-                alt="Mesa dulce con decoración de celebración"
-                loading="eager"
-              />
-            </figure>
-            <figure class="hero-card wide">
-              <img
-                src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1200&q=80"
-                alt="Cafetería sirviendo bebidas para take away"
-                loading="eager"
-              />
-            </figure>
-            <figure class="hero-card small">
-              <img
-                src="https://images.unsplash.com/photo-1528578829123-9f8398118d8c?auto=format&fit=crop&w=900&q=80"
-                alt="Packaging y descartables organizados"
-                loading="eager"
-              />
-            </figure>
+        <div class="container hero-layout">
+          <p class="eyebrow">Pueblo Esther, Santa Fe</p>
+          <h1 id="hero-title" class="hero-title">
+            <span class="hero-static">Hola,</span>
+            <span class="hero-script" aria-label="bienvenido">
+              <svg viewBox="0 0 760 180" role="img" aria-hidden="true" class="script-word">
+                <defs>
+                  <linearGradient id="scriptGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#bb5f43" />
+                    <stop offset="60%" stop-color="#d68157" />
+                    <stop offset="100%" stop-color="#e09a70" />
+                  </linearGradient>
+                </defs>
+                <path class="script-path"
+                  d="M33 120c8-36 14-64 18-82c2-8 10-10 16-4c16 17-17 88 7 88c19 0 47-75 64-73c11 1-6 38-1 60c2 9 9 15 18 15c22 0 36-42 45-42c8 0-8 44 10 44c13 0 28-48 49-48c13 0-3 45 14 45c17 0 28-47 44-47c13 0-2 44 15 44c17 0 26-45 42-45c12 0-4 45 12 45c17 0 27-46 43-46c10 0 0 21 4 31c5 14 24 15 34 4c14-15 26-45 42-45c11 0-1 34 6 44c10 14 30 7 40-7c11-17 20-36 33-36c17 0 2 45 19 45c18 0 35-38 52-38"
+                />
+              </svg>
+              <span class="sr-only">bienvenido</span>
+            </span>
+          </h1>
+          <p class="lead">
+            Todo para tu negocio y tus festejos en Pueblo Esther.
+          </p>
+          <p class="sublead">
+            Descartables, cotillón, repostería y papelería en un solo lugar.
+          </p>
+          <div class="cta-row">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5493410000000?text=Hola%20Papel%20Picado,%20quiero%20hacer%20un%20pedido"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pedir por WhatsApp</a
+            >
+            <a class="btn btn-outline" href="#categorias">Ver categorías</a>
           </div>
         </div>
       </section>
@@ -262,6 +246,13 @@
     <script>
       const header = document.querySelector('.site-header');
       const reveals = document.querySelectorAll('.reveal');
+      const scriptPath = document.querySelector('.script-path');
+
+      if (scriptPath) {
+        const length = scriptPath.getTotalLength();
+        scriptPath.style.setProperty('--path-length', `${length}`);
+        scriptPath.classList.add('is-ready');
+      }
 
       const observer = new IntersectionObserver(
         (entries) => {
