@@ -276,27 +276,17 @@ p {
   overflow: visible;
 }
 
-.hero-script-ghost,
-.hero-script-main {
+.pp-bienvenido-word path {
+  fill: none;
+  stroke: url(#ppInkGradient);
   stroke-linecap: round;
   stroke-linejoin: round;
-  fill: none;
   vector-effect: non-scaling-stroke;
-}
-
-.hero-script-ghost {
-  stroke: #f7ede2;
-  stroke-width: clamp(6.4px, 0.9vw, 9.2px);
-  opacity: 0.95;
-}
-
-.hero-script-main {
-  stroke: url(#heroBienvenidoGradient);
-  stroke-width: clamp(4.2px, 0.62vw, 6.6px);
-  filter: drop-shadow(0 8px 18px rgba(187, 95, 67, 0.2));
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: bienvenidoLoop 5.8s cubic-bezier(0.3, 0.08, 0.28, 0.98) infinite;
+  stroke-width: clamp(3.8px, 0.56vw, 6px);
+  filter: drop-shadow(0 8px 18px rgba(190, 102, 73, 0.2));
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: writeErase 5.2s ease-in-out infinite;
 }
 
 .sr-only {
@@ -337,26 +327,26 @@ p {
   color: #7a6860;
 }
 
-@keyframes bienvenidoLoop {
+@keyframes writeErase {
   0% {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 3000;
   }
-  46% {
+  50% {
     stroke-dashoffset: 0;
   }
-  58% {
+  59.615% {
     stroke-dashoffset: 0;
   }
-  92% {
-    stroke-dashoffset: -1000;
+  94.231% {
+    stroke-dashoffset: 3000;
   }
   100% {
-    stroke-dashoffset: -1000;
+    stroke-dashoffset: 3000;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-script-main {
+  .pp-bienvenido-word path {
     animation: none;
     stroke-dashoffset: 0;
   }
@@ -682,12 +672,10 @@ p {
     gap: 0.35rem;
   }
 
-  .hero-script-main {
-    stroke-width: clamp(3.6px, 1.06vw, 5.2px);
-  }
-
-  .hero-script-ghost {
-    stroke-width: clamp(5.4px, 1.35vw, 7.1px);
+  .pp-bienvenido-word path {
+    stroke-width: clamp(3.4px, 0.95vw, 5px);
+    stroke-dasharray: 2600;
+    stroke-dashoffset: 2600;
   }
 
   .shape-a {
