@@ -290,7 +290,7 @@ p {
   filter: drop-shadow(0 8px 14px rgba(190, 102, 73, 0.2));
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  animation: bienvenidosLoop 5.4s cubic-bezier(0.35, 0.05, 0.2, 1) infinite;
+  animation: bienvenidosLoop 5.4s steps(18, end) infinite;
 }
 
 .lead {
