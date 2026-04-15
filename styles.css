@@ -270,39 +270,39 @@ p {
   width: min(95vw, 880px);
 }
 
-.script-word {
+.hero-script-svg {
   width: 100%;
   height: auto;
   overflow: visible;
 }
 
-.script-shadow,
-.script-path,
-.script-dot {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.hero-script-svg path {
   vector-effect: non-scaling-stroke;
 }
 
-.script-shadow {
-  stroke: rgba(250, 241, 233, 0.92);
-  stroke-width: clamp(8px, 1.08vw, 11px);
-}
-
-.script-path {
-  stroke: url(#scriptGradient);
-  stroke-width: clamp(5px, 0.75vw, 8px);
+.hero-script-word {
   filter: drop-shadow(0 10px 22px rgba(187, 95, 67, 0.2));
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: handwritingLoop 5.2s cubic-bezier(0.34, 0.12, 0.29, 0.97) infinite;
 }
 
-.script-dot {
-  fill: url(#scriptGradient);
-  opacity: 0;
-  animation: dotLoop 5.2s ease-in-out infinite;
+.hero-script-guide {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  animation: bienvenidoLoop 5.5s cubic-bezier(0.34, 0.12, 0.29, 0.97) infinite;
+}
+
+.hero-script-guide-mask {
+  stroke: #fff;
+  stroke-width: clamp(16px, 2.1vw, 24px);
+}
+
+.hero-script-guide-pen {
+  stroke: url(#heroScriptGradient);
+  stroke-width: clamp(2.8px, 0.4vw, 4.2px);
+  opacity: 0.95;
+  filter: drop-shadow(0 8px 16px rgba(194, 110, 84, 0.32));
 }
 
 .sr-only {
@@ -343,51 +343,31 @@ p {
   color: #7a6860;
 }
 
-@keyframes handwritingLoop {
+@keyframes bienvenidoLoop {
   0% {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 1600;
   }
-  50% {
+  50.909% {
     stroke-dashoffset: 0;
   }
-  59.6% {
+  60% {
     stroke-dashoffset: 0;
   }
-  94.2% {
-    stroke-dashoffset: 1000;
+  94.545% {
+    stroke-dashoffset: -1600;
   }
   100% {
-    stroke-dashoffset: 1000;
-  }
-}
-
-@keyframes dotLoop {
-  0%,
-  14% {
-    opacity: 0;
-  }
-  18%,
-  80% {
-    opacity: 0.95;
-  }
-  94.2%,
-  100% {
-    opacity: 0;
+    stroke-dashoffset: -1600;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .script-path,
-  .script-dot {
+  .hero-script-guide {
     animation: none;
   }
 
-  .script-path {
+  .hero-script-guide {
     stroke-dashoffset: 0;
-  }
-
-  .script-dot {
-    opacity: 1;
   }
 }
 
@@ -711,12 +691,12 @@ p {
     gap: 0.35rem;
   }
 
-  .script-path {
-    stroke-width: clamp(4.8px, 1.05vw, 6.4px);
+  .hero-script-guide-mask {
+    stroke-width: clamp(12px, 1.75vw, 16px);
   }
 
-  .script-shadow {
-    stroke-width: clamp(7.2px, 1.35vw, 9.6px);
+  .hero-script-guide-pen {
+    stroke-width: clamp(2.2px, 0.72vw, 3.4px);
   }
 
   .shape-a {
