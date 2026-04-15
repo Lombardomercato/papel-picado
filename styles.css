@@ -270,8 +270,8 @@ p {
 
 .hero-script {
   display: inline-block;
-  width: clamp(170px, 36vw, 360px);
-  transform: translateY(0.16em);
+  width: clamp(220px, 43vw, 520px);
+  transform: translateY(0.14em);
 }
 
 .hero-script-svg {
@@ -283,7 +283,7 @@ p {
 .pp-bienvenidos-path {
   fill: none;
   stroke: url(#ppBienvenidosGradient);
-  stroke-width: clamp(3.5px, 0.48vw, 4.8px);
+  stroke-width: clamp(4.2px, 0.55vw, 8px);
   stroke-linecap: round;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
@@ -668,8 +668,8 @@ p {
   }
 
   .hero-script {
-    width: clamp(165px, 52vw, 250px);
-    transform: translateY(0.06em);
+    width: clamp(190px, 66vw, 360px);
+    transform: translateY(0.1em);
   }
 
   .pp-bienvenidos-path {
