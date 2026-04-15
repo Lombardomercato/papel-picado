@@ -252,11 +252,9 @@ p {
 
 .hero-title {
   display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  column-gap: clamp(0.55rem, 1.4vw, 1rem);
-  row-gap: 0.35rem;
-  max-width: 18ch;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: clamp(0.45rem, 1.4vw, 0.9rem);
 }
 
 .hero-title-static {
@@ -270,26 +268,29 @@ p {
 
 .hero-script {
   display: inline-block;
-  width: clamp(220px, 43vw, 520px);
-  transform: translateY(0.14em);
+  width: clamp(520px, 78vw, 980px);
+  max-width: 100%;
+  transform: none;
 }
 
 .hero-script-svg {
   width: 100%;
   height: auto;
   overflow: visible;
+  shape-rendering: geometricPrecision;
 }
 
 .pp-bienvenidos-path {
   fill: none;
   stroke: url(#ppBienvenidosGradient);
-  stroke-width: clamp(4.2px, 0.55vw, 8px);
+  stroke-width: clamp(4.6px, 0.62vw, 8.2px);
   stroke-linecap: round;
   stroke-linejoin: round;
+  stroke-miterlimit: 1;
   vector-effect: non-scaling-stroke;
   filter: drop-shadow(0 8px 14px rgba(190, 102, 73, 0.2));
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
   animation: bienvenidosLoop 4.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
@@ -321,22 +322,19 @@ p {
 
 @keyframes bienvenidosLoop {
   0% {
-    stroke-dashoffset: 1;
+    stroke-dashoffset: 1000;
   }
   54.5455% {
     stroke-dashoffset: 0;
   }
-  59% {
+  61.3636% {
     stroke-dashoffset: 0;
   }
-  61.3636% {
-    stroke-dashoffset: 0.03;
-  }
   97.7273% {
-    stroke-dashoffset: 1;
+    stroke-dashoffset: 1000;
   }
   100% {
-    stroke-dashoffset: 1;
+    stroke-dashoffset: 1000;
   }
 }
 
@@ -663,7 +661,7 @@ p {
   }
 
   .hero-title {
-    max-width: 16ch;
+    row-gap: clamp(0.4rem, 1.8vw, 0.7rem);
   }
 
   .hero-title-static {
@@ -671,8 +669,8 @@ p {
   }
 
   .hero-script {
-    width: clamp(190px, 66vw, 360px);
-    transform: translateY(0.1em);
+    width: min(100%, clamp(300px, 92vw, 560px));
+    transform: none;
   }
 
   .pp-bienvenidos-path {
