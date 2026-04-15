@@ -276,17 +276,27 @@ p {
   overflow: visible;
 }
 
-.hero-script-svg path {
+.hero-script-ghost,
+.hero-script-main {
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
-  stroke: rgba(255, 255, 255, 0.94);
-  stroke-width: clamp(3.2px, 0.46vw, 5.2px);
   vector-effect: non-scaling-stroke;
-  filter: drop-shadow(0 10px 22px rgba(187, 95, 67, 0.2));
+}
+
+.hero-script-ghost {
+  stroke: #f7ede2;
+  stroke-width: clamp(6.4px, 0.9vw, 9.2px);
+  opacity: 0.95;
+}
+
+.hero-script-main {
+  stroke: url(#heroBienvenidoGradient);
+  stroke-width: clamp(4.2px, 0.62vw, 6.6px);
+  filter: drop-shadow(0 8px 18px rgba(187, 95, 67, 0.2));
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: bienvenidoLoop 5.5s cubic-bezier(0.34, 0.12, 0.29, 0.97) infinite;
+  animation: bienvenidoLoop 5.8s cubic-bezier(0.3, 0.08, 0.28, 0.98) infinite;
 }
 
 .sr-only {
@@ -329,15 +339,15 @@ p {
 
 @keyframes bienvenidoLoop {
   0% {
-    stroke-dashoffset: 1600;
+    stroke-dashoffset: 1000;
   }
-  50.909% {
+  46% {
     stroke-dashoffset: 0;
   }
-  60% {
+  58% {
     stroke-dashoffset: 0;
   }
-  94.545% {
+  92% {
     stroke-dashoffset: -1000;
   }
   100% {
@@ -346,11 +356,8 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-script-svg path {
+  .hero-script-main {
     animation: none;
-  }
-
-  .hero-script-svg path {
     stroke-dashoffset: 0;
   }
 }
@@ -675,8 +682,12 @@ p {
     gap: 0.35rem;
   }
 
-  .hero-script-svg path {
-    stroke-width: clamp(3px, 0.95vw, 4.2px);
+  .hero-script-main {
+    stroke-width: clamp(3.6px, 1.06vw, 5.2px);
+  }
+
+  .hero-script-ghost {
+    stroke-width: clamp(5.4px, 1.35vw, 7.1px);
   }
 
   .shape-a {
