@@ -292,7 +292,7 @@ p {
   filter: drop-shadow(0 8px 14px rgba(190, 102, 73, 0.2));
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: bienvenidosLoop 4.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  animation: bienvenidosLoop 6.1s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
 .lead {
@@ -325,13 +325,13 @@ p {
   0% {
     stroke-dashoffset: 1000;
   }
-  54.5455% {
+  55.7377% {
     stroke-dashoffset: 0;
   }
-  61.3636% {
+  63.1148% {
     stroke-dashoffset: 0;
   }
-  97.7273% {
+  97.541% {
     stroke-dashoffset: 1000;
   }
   100% {
