@@ -107,7 +107,7 @@
         <div class="container intro-grid">
           <p class="kicker">Nuestra esencia</p>
           <div>
-            <h2>Papel Picado acompaña <span class="section-highlight">celebraciones</span>, negocios y proyectos de todos los días.</h2>
+            <h2>Papel Picado acompaña celebraciones, negocios y proyectos de todos los días.</h2>
             <p>
               Desde una fiesta en casa hasta la reposición de insumos para cafeterías y
               restaurantes, resolvemos con variedad, cercanía y atención rápida.
@@ -120,7 +120,7 @@
         <div class="container feature-grid">
           <div>
             <p class="kicker">B2B</p>
-            <h2 id="empresas-title">Tu proveedor local de <span class="section-highlight">descartables</span></h2>
+            <h2 id="empresas-title">Tu proveedor local de descartables</h2>
             <p>
               Acompañamos a cafés, bares, restaurantes y emprendimientos con soluciones
               pensadas para el ritmo real de cada negocio.
@@ -153,7 +153,7 @@
           </figure>
           <div>
             <p class="kicker">B2C</p>
-            <h2 id="festejos-title">Todo para <span class="hero-highlight">celebrar mejor</span></h2>
+            <h2 id="festejos-title">Todo para celebrar mejor</h2>
             <p>
               Cumpleaños, eventos familiares, mesas dulces y celebraciones temáticas: elegí
               productos con estilo, combiná colores y resolvé todo en un solo lugar.
@@ -172,7 +172,7 @@
         <div class="container">
           <div class="heading-row">
             <p class="kicker">Categorías</p>
-            <h2 id="categorias-title">Todo lo que necesitás, <span class="section-highlight">curado por rubro</span></h2>
+            <h2 id="categorias-title">Todo lo que necesitás, curado por rubro</h2>
           </div>
           <div class="category-grid">
             <article class="category-card featured">
@@ -191,7 +191,7 @@
       <section class="section reveal" aria-labelledby="momentos-title">
         <div class="container">
           <p class="kicker">Momentos de uso</p>
-          <h2 id="momentos-title">Pensado para <span class="subtle-highlight">contextos reales</span></h2>
+          <h2 id="momentos-title">Pensado para contextos reales</h2>
           <div class="moments-grid">
             <article><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80" alt="Cafetería" loading="lazy" /><span>Cafeterías</span></article>
             <article><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Take away" loading="lazy" /><span>Take away</span></article>
@@ -205,7 +205,7 @@
 
       <section class="section section-soft reveal" aria-labelledby="destacados-title">
         <div class="container">
-          <h2 id="destacados-title"><span class="section-highlight">Selección destacada</span></h2>
+          <h2 id="destacados-title">Selección destacada</h2>
           <div class="featured-gallery">
             <article>
               <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1300&q=80" alt="Productos para negocios" loading="lazy" />
@@ -226,7 +226,7 @@
       <section class="section reveal" aria-labelledby="local-title">
         <div class="container trust-box">
           <p class="kicker">Pueblo Esther</p>
-          <h2 id="local-title">Cerca, resolutivos y con <span class="subtle-highlight">todo en un solo lugar</span>.</h2>
+          <h2 id="local-title">Cerca, resolutivos y con todo en un solo lugar.</h2>
           <p>
             Somos un comercio local que entiende tus tiempos: cercanía real, asesoramiento
             humano y soluciones para el día a día de empresas y familias.
@@ -236,7 +236,7 @@
 
       <section class="section reveal" id="contacto" aria-labelledby="cta-title">
         <div class="container final-cta">
-          <h2 id="cta-title">¿Necesitás resolver un <span class="hero-highlight">evento</span> o abastecer tu negocio?</h2>
+          <h2 id="cta-title">¿Necesitás resolver un evento o abastecer tu negocio?</h2>
           <p>Escribinos y te ayudamos rápido.</p>
           <a
             class="btn btn-primary"
@@ -291,25 +291,6 @@
 
       setHeaderState();
       window.addEventListener('scroll', setHeaderState);
-
-      const premiumHighlights = document.querySelectorAll(
-        '.hero-highlight, .section-highlight, .subtle-highlight'
-      );
-
-      premiumHighlights.forEach((item) => {
-        item.addEventListener('mousemove', (event) => {
-          const rect = item.getBoundingClientRect();
-          const x = ((event.clientX - rect.left) / rect.width) * 100;
-          const y = ((event.clientY - rect.top) / rect.height) * 100;
-          item.style.setProperty('--mx', `${x}%`);
-          item.style.setProperty('--my', `${y}%`);
-        });
-
-        item.addEventListener('mouseleave', () => {
-          item.style.removeProperty('--mx');
-          item.style.removeProperty('--my');
-        });
-      });
     </script>
   </body>
 </html>
