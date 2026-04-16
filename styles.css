@@ -49,85 +49,6 @@ h3 {
   letter-spacing: -0.025em;
 }
 
-.hero-highlight,
-.section-highlight,
-.subtle-highlight {
-  --highlight-speed: 14s;
-  --highlight-glow: none;
-  --spot-size: 72%;
-  --highlight-opacity: 1;
-  display: inline;
-  background-image: linear-gradient(120deg, #00d9ff, #6a5cff, #ff2fa3, #ffd400, #00d9ff);
-  background-size: 220% 220%;
-  background-position: var(--highlight-shift, 0%) 50%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: inherit;
-  -webkit-text-fill-color: currentColor;
-  transition:
-    color 0.45s ease,
-    filter 0.45s ease,
-    text-shadow 0.45s ease,
-    -webkit-text-fill-color 0.45s ease;
-}
-
-.hero-highlight:hover,
-.hero-highlight:focus-visible,
-.section-highlight:hover,
-.section-highlight:focus-visible,
-.subtle-highlight:hover,
-.subtle-highlight:focus-visible {
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: highlightFlow var(--highlight-speed) linear infinite;
-  -webkit-mask-image: radial-gradient(
-    circle var(--spot-size) at var(--mx, 50%) var(--my, 50%),
-    rgba(0, 0, 0, var(--highlight-opacity)) 0%,
-    rgba(0, 0, 0, calc(var(--highlight-opacity) * 0.9)) 34%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  mask-image: radial-gradient(
-    circle var(--spot-size) at var(--mx, 50%) var(--my, 50%),
-    rgba(0, 0, 0, var(--highlight-opacity)) 0%,
-    rgba(0, 0, 0, calc(var(--highlight-opacity) * 0.9)) 34%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  filter: saturate(112%);
-  text-shadow: var(--highlight-glow);
-}
-
-.hero-highlight {
-  --spot-size: 98%;
-  --highlight-speed: 7s;
-  --highlight-opacity: 1;
-  --highlight-glow: 0 0 10px rgba(106, 92, 255, 0.24), 0 0 18px rgba(255, 47, 163, 0.18);
-}
-
-.section-highlight {
-  --spot-size: 82%;
-  --highlight-speed: 10s;
-  --highlight-opacity: 0.88;
-}
-
-.subtle-highlight {
-  --spot-size: 68%;
-  --highlight-speed: 13s;
-  --highlight-opacity: 0.74;
-  filter: saturate(92%);
-}
-
-@keyframes highlightFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 h1 {
   font-size: clamp(2.3rem, 7.5vw, 5.5rem);
 }
@@ -471,15 +392,6 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-highlight:hover,
-  .hero-highlight:focus-visible,
-  .section-highlight:hover,
-  .section-highlight:focus-visible,
-  .subtle-highlight:hover,
-  .subtle-highlight:focus-visible {
-    animation: none;
-  }
-
   .pp-bienvenidos-path {
     animation: none;
     stroke-dashoffset: 0;
